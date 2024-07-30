@@ -23,17 +23,17 @@ const Example: React.FC=()=> {
 export default Example
 
 
-const BooleanStateExample: React.FC = () => {
-  const [isVisible, setIsVisible] = useState<boolean>(true);
+// const BooleanStateExample: React.FC = () => {
+//   const [isVisible, setIsVisible] = useState<boolean>(true);
 
-  return (
-    <div>
-      {isVisible && <p>This is visible!</p>}
-      <button onClick={() => setIsVisible(!isVisible)}>
-        {isVisible ? "Hide" : "Show"} Text
-      </button>
-    </div>
-  );
-};
+//   return (
+//     <div>
+//       {isVisible && <p>This is visible!</p>}
+//       <button onClick={() => setIsVisible(!isVisible)}>
+//         {isVisible ? "Hide" : "Show"} Text
+//       </button>
+//     </div>
+//   );
+// };
 
-export { Example, BooleanStateExample };
+// export { Example, BooleanStateExample };
