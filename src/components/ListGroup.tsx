@@ -48,3 +48,45 @@
 
 // export default ListGroup;
 // "list-group-item active"
+
+
+      {/* <nav classNameName="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div classNameName="container-fluid">
+          <a classNameName="navbar-brand" href="#">{title}</a>
+          <button 
+            classNameName="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation"
+          >
+            <span classNameName="navbar-toggler-icon"></span>
+          </button>
+          <div classNameName="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul classNameName="navbar-nav me-auto mb-2 mb-lg-0">
+              <li classNameName="nav-item">
+                <a classNameName="nav-link active" aria-current="page" href="/home">{homeText}</a>
+              </li>
+              <li classNameName="nav-item">
+                <a classNameName="nav-link" href="/about">{aboutText}</a>
+              </li>
+            </ul>
+            <form classNameName="d-flex" role="search">
+              <input 
+                classNameName="form-control me-2" 
+                type="search" 
+                placeholder="Search" 
+                aria-label="Search"
+              />
+              <button 
+                classNameName="btn btn-outline-primary" 
+                type="submit"
+              >
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>  */}

@@ -1,15 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Example: React.FC=()=> {
     const [city, setCity] = useState("Nalgonda");
-    console.log(city)
-
-    // setCity("Nalgonda") //simple  usestate uses and syntax
-    // console.log(city)
+useEffect(()=>{
+  console.log("city changed to:", city);
+  return () => {
+    console.log("Cleanup for city:", city);
+  };
+},[city])
   //  A Function to change the city(state)
   const changeCity = () => {
     if (city === "Nalgonda") {
       setCity("Hyderabad");
+    } else {
+      setCity("Miryalaguda");
     }
   };
   return (

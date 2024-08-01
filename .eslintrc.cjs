@@ -8,7 +8,10 @@ module.exports = {
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
-  plugins: ['react-refresh'],
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
   rules: {
     'react-refresh/only-export-components': [
       'warn',
