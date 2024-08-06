@@ -1,4 +1,9 @@
-import TextForm from "./TextForm";
+
+import UseEffect from "../UseState Rules/UseEffect";
+import EventHandling from "./DestructuringChallenge";
+import { CoditionOperator } from "./TernaryOperatorUsage";
+import Testcomp from "./Testcomp";
+import '../App.css'; 
 
 
 const Home = () => {
@@ -25,7 +30,23 @@ const Home = () => {
           <img src="src\bg.png" className="h-80" alt="A display of the latest phones" />
         </div>
       </main>
-      <TextForm heading ="Enter The text to analyze below"/>
+      <div className="-mx-100 relative bg-pink-800 text-white p-2 overflow-hidden">
+        <div className="marquee">
+          <div className="marquee-text">
+            Discover this year's top smartphones with the best features, specs, and prices, including cutting-edge tech and great cameras.
+          </div>
+        </div>
+      </div>
+      <CoditionOperator/>
+        <Testcomp/>
+        <body>
+        <h1 className="font-bold mx-2 my-4 text-3xl">This Is practice sheet</h1>
+        <div className="mx-5 font-sans">I am using mx-5</div>
+        <div className="mx-5 font-serif">I am using mx-5</div>
+        <div className="mx-5 font-semibold">I am using mx-5</div>
+      </body>
+        <UseEffect/>
+        <EventHandling/>         
     </div>
   );
 }

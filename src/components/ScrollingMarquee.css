@@ -1,19 +1,11 @@
-.heading {
-    color: green;
-    text-align: center;
-  }
-  .paragraph {
-    font-size: 18px;
-    color: gray;
-  }
-
-  @keyframes marquee {
+/* Keyframes for the scrolling animation */
+@keyframes marquee {
     0% { transform: translateX(100%); }
     100% { transform: translateX(-100%); }
   }
   
   .marquee {
-    display: flex;
+    display: inline-block;
     white-space: nowrap;
     overflow: hidden;
     position: relative;
@@ -22,5 +14,6 @@
   
   .marquee-text {
     display: inline-block;
-    animation: marquee 10s linear infinite; /* Adjust the speed as needed */
+    animation: marquee 15s linear infinite;
   }
+  

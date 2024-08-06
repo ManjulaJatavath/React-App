@@ -5,10 +5,12 @@ interface NavbarProps {
   title: string;
   homeText: string;
   aboutText: string;
+  textfrom: string;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ title, homeText, aboutText }) => {
+const Navbar: React.FC<NavbarProps> = ({ title, homeText, aboutText, textfrom }) => {
   return (
+    <>
     <nav className="bg-purple-800 text-white flex justify-between items-center p-3">
       <span className="text-xl font-bold mb-2">{title}</span>
       <ul className="flex space-x-8 items-center">
@@ -24,7 +26,6 @@ const Navbar: React.FC<NavbarProps> = ({ title, homeText, aboutText }) => {
         >
           {aboutText}
         </Link>
-
         <Link
           to="/contact"
           className="text-white hover:bg-black  px-3 py-2 rounded  no-underline"
@@ -32,17 +33,17 @@ const Navbar: React.FC<NavbarProps> = ({ title, homeText, aboutText }) => {
           Contact
         </Link>
         <Link
-          to="/catalogues"
-          className="text-white hover:bg-black px-3 py-2 rounded  no-underline"
+          to="/textfrom"
+          className=" text-white hover:bg-black px-3 py-2 rounded  no-underline"
         >
-          Catalogues
+          {textfrom}
         </Link>
       </ul>
       <form className="items-center flex mx-2 mb-2">
         <input
           type="text"
           placeholder="Search..."
-          className="p-2 rounded-l bg-white text-black"
+          className="p-2 mx-1 rounded-l bg-white  border-2 border-gray-600 text-black"
         />
         <button
           type="submit"
@@ -51,7 +52,13 @@ const Navbar: React.FC<NavbarProps> = ({ title, homeText, aboutText }) => {
           Search
         </button>
       </form>
+      {/* <button 
+        type="button" 
+        className="ml-4 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
+      >
+      </button> */}
     </nav>
+    </>
   );
 };
 

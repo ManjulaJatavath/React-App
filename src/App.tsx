@@ -1,10 +1,52 @@
 import './index.css';
-// import TextForm from './components/TextForm';
 import Nabar from './components/Nabar';
 import About from './components/About';
 import Home from './components/Home';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import TextForm from './components/TextForm';
+import Footer from './components/Footer';
+
+// import { useState } from 'react';
+// import Alert from './components/Alert';
+// import TernaryOperatorUsage from './components/TernaryOperatorUsage';
+
+
+function App() {
+
+  return (
+    <Router>
+    <div>
+      <Nabar title={'PhonesMenia'} homeText={'Home'} aboutText={'About'} textfrom={'Catologues'} />
+      {/* <Alert alert="This is a Alert Message"/> */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/textfrom" element={<TextForm heading ="Enter The text to analyze below"/>} />
+        {/* <TextForm heading ="Enter The text to analyze below"/> */}
+      </Routes>
+      <Footer />
+    </div>
+  </Router>
+  );
+}
+
+export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // import Counter from "./UseState Rules/Counter"; 
 // import Greeting from "./components/Greeting"; 
 // import Sample from "./components/Sample"; 
@@ -42,7 +84,7 @@ import TextForm from './components/TextForm';
 //   return (
 //     <div classNameNameName="container">
       {/* <ListGroup /> */}
-      {/* <Sample />
+      {/*
       <Greeting firstname="Manjula" lastname="Jatavath" />
       <Counter />
       <h4>This is App css page</h4>
@@ -104,28 +146,3 @@ import TextForm from './components/TextForm';
 //     </>
 //   );
 // }
-
-function App() {
-  return (
-    // <>
-    //   <Nabar title="PhonesMania" homeText="Home" aboutText="About" />
-    //   <Home />
-    //   <About />
-    //   <div className="container mt-4">
-    //     {/* <TextForm heading="Enter The text to analyze below" /> */}
-    //   </div>
-    // </>
-    <Router>
-    <div>
-      <Nabar title={'PhonesMenia'} homeText={'Home'} aboutText={'About'} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </div>
-  </Router>
-  );
-}
-
-export default App;

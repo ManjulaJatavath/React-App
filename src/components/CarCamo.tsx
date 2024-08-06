@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './ScrollingMarquee.css'; 
 interface CarComponentProps {
   make: string;
   model: string;
@@ -19,3 +19,4 @@ const CarCamo: React.FC<CarComponentProps> = ({ make, model,start }) => {
   };
   
   export default CarCamo;
+
