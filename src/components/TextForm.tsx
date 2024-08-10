@@ -1,10 +1,9 @@
 
 import  { useState } from 'react';
-// import TernaryOperatorUsage from './TernaryOperatorUsage';
-import MouseEventsExample from '../Events/MouseEventsExample';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Testcomp from './Testcomp';
+import VerticalButtons from './VerticalButtons';
+// import Testcomp from './Testcomp';
 
 const TextForm = (props:any) => {
     const handleUpperCaseClick =()=>{
@@ -68,8 +67,9 @@ const TextForm = (props:any) => {
       <h2>Preview</h2>
       <p>{text.length>0 ? text:"Nothing to preview"}</p>
       <p>Please Enter something in the textbox above to preview it here</p>
-      <MouseEventsExample/>
+      {/* <MouseEventsExample/> */}
       <ToastContainer />
+      <VerticalButtons />
     </div>
 
     </>

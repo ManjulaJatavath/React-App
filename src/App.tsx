@@ -5,6 +5,7 @@ import Home from './components/Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import TextForm from './components/TextForm';
 import Footer from './components/Footer';
+import UserForm from './components/UserForm';
 
 // import { useState } from 'react';
 // import Alert from './components/Alert';
@@ -16,12 +17,13 @@ function App() {
   return (
     <Router>
     <div>
-      <Nabar title={'PhonesMenia'} homeText={'Home'} aboutText={'About'} textfrom={'Catologues'} />
+      <Nabar title={'PhonesMenia'} homeText={'Home'} aboutText={'About'} textfrom={'Catologues'} userform={'Contact'} />
       {/* <Alert alert="This is a Alert Message"/> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<UserForm />} />
         <Route path="/textfrom" element={<TextForm heading ="Enter The text to analyze below"/>} />
         {/* <TextForm heading ="Enter The text to analyze below"/> */}
       </Routes>

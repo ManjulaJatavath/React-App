@@ -6,9 +6,10 @@ interface NavbarProps {
   homeText: string;
   aboutText: string;
   textfrom: string;
+  userform: string;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ title, homeText, aboutText, textfrom }) => {
+const Navbar: React.FC<NavbarProps> = ({ title, homeText, aboutText, textfrom, userform }) => {
   return (
     <>
     <nav className="bg-purple-800 text-white flex justify-between items-center p-3">
@@ -30,7 +31,7 @@ const Navbar: React.FC<NavbarProps> = ({ title, homeText, aboutText, textfrom })
           to="/contact"
           className="text-white hover:bg-black  px-3 py-2 rounded  no-underline"
         >
-          Contact
+          {userform}
         </Link>
         <Link
           to="/textfrom"

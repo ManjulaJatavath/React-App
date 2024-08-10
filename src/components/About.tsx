@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import Testcomp from "./Testcomp";
-import { CoditionOperator } from "./TernaryOperatorUsage";
+import {useState } from "react";
+// import Testcomp from "./Testcomp";
+// import { CoditionOperator } from "./TernaryOperatorUsage";
 
 
 
