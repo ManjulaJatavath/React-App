@@ -42,7 +42,7 @@ const TextForm = (props:any) => {
         toast("Text Copied!");
       } 
     }
-
+// 
 
     const [text, setText] = useState('Enter Text Here!');
     // console.log(useState("Enter you text2"))
