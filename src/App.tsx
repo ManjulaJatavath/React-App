@@ -12,6 +12,8 @@ import UserForm from './components/UserForm';
 // import TernaryOperatorUsage from './components/TernaryOperatorUsage';
 
 
+
+
 function App() {
 
   return (
@@ -30,6 +32,7 @@ function App() {
       <Footer />
     </div>
   </Router>
+  
   );
 }
 

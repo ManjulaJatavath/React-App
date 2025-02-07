@@ -1,10 +1,18 @@
 
 import UseEffect from "../UseState Rules/UseEffect";
-import EventHandling from "./DestructuringChallenge";
 import { CoditionOperator } from "./TernaryOperatorUsage";
 import Testcomp from "./Testcomp";
 import '../App.css'; 
+import ProductList from "./ProductList";
+import MessageList from "./MessageList";
 
+
+
+const products = [
+  { id: 1, name: 'Laptop', price: 50000 },
+  { id: 2, name: 'Smartphone', price: 17800 },
+  { id: 3, name: 'Tablet', price: 8000 },
+];
 
 const Home = () => {
   return (
@@ -37,16 +45,18 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <CoditionOperator/>
+      <ProductList products={products} />
+      <MessageList messages={[
+          { id: 1, sender: 'Manju',  product: 'Laptop', text: 'Nice Product!', starred: false },
+          { id: 2, sender: 'Aruna',  product: 'Mobile', text: 'Average?', starred: true },
+          { id: 3, sender: 'Greethika', product: 'Tab', text: 'Excellent!', starred: false },
+      ]}/>
+            <UseEffect/>
+      <CoditionOperator />
         <Testcomp/>
         <body>
-        <h1 className="font-bold mx-2 my-4 text-3xl">This Is practice sheet</h1>
-        <div className="mx-5 font-sans">I am using mx-5</div>
-        <div className="mx-5 font-serif">I am using mx-5</div>
-        <div className="mx-5 font-semibold">I am using mx-5</div>
       </body>
-        <UseEffect/>
-        <EventHandling/>         
+        {/* <EventHandling/>          */}
     </div>
   );
 }

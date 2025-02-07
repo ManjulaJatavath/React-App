@@ -2,7 +2,22 @@
 import  { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import VerticalButtons from './VerticalButtons';
+import { VerticalButtons } from './VerticalButtons';
+import ResponsiveGridButtons from './ResponsiveGridButtons';
+import TaskForm from './TaskForm';
+import TaskList from './TaskList';
+import MyComponent2,{MyComponent1} from './Class_Compo';
+import { Garage } from './Garage';
+import Userlist from './UserList';
+
+
+
+
+interface Task {
+  id: number;
+  text: string;
+  completed: boolean;
+}
 // import Testcomp from './Testcomp';
 
 const TextForm = (props:any) => {
@@ -45,13 +60,35 @@ const TextForm = (props:any) => {
 // 
 
     const [text, setText] = useState('Enter Text Here!');
+
+    const [tasks, setTasks] = useState<Task[]>([]);
+    const [nextId, setNextId] = useState<number>(1);
+  
+    const addTask = (taskText: string) => {
+      setTasks([...tasks, { id: nextId, text: taskText, completed: false }]);
+      setNextId(nextId + 1);
+    };
+  
+    const toggleTask = (id: number) => {
+      setTasks(tasks.map(task =>
+        task.id === id ? { ...task, completed: !task.completed } : task
+      ));
+    };
+  
+    const usersData = [
+      { id: 1, name: 'manju', age: 24 },
+      { id: 2, name: 'aruna', age: 16 },
+      { id: 3, name: 'greethika', age: 8},
+      { id: 4, name: 'nandu', age: 21}
+    ];
+
     // console.log(useState("Enter you text2"))
     // setText("Hello")
   return (
     <>
     <div className='container'>
         <h1>{props.heading}</h1>
-        <div className="mb-3">
+        <div className="mb-3 shadow-md">
         <textarea className="form-control" value={text} onChange={handleOnChange} id="mybox" rows={3}></textarea>
         </div>
         <button disabled={text.length===0} className="btn btn-primary mx-1" onClick={handleUpperCaseClick} >Convert To Upper Case</button>
@@ -60,16 +97,29 @@ const TextForm = (props:any) => {
         <button disabled={text.length===0} className="btn btn-primary mx-1" onClick={handleCopy} >Copy Text</button>
         <button disabled={text.length===0} className="btn btn-primary mx-1 my-2" onClick={handleExtraSpaces} >Remove Extra Spaces</button>
     </div>
-    <div className="container my-2">
+    <div className="container my-2 ">
       <h2>Your text Summary</h2>
       <p>{text.split(" ").filter((element)=>{return element.length!=0}).length} words and {text.length} characters</p>
       <p >{0.008*text.split(" ").length} Mintes read</p>
       <h2>Preview</h2>
       <p>{text.length>0 ? text:"Nothing to preview"}</p>
       <p>Please Enter something in the textbox above to preview it here</p>
+
+      <div className="container mx-auto p-4">
+      <TaskForm onAddTask={addTask} />
+      <TaskList tasks={tasks} onToggleTask={toggleTask} />
+      <div>
+        <MyComponent1/>
+        <MyComponent2/>
+      </div>
+    </div>
+      
       {/* <MouseEventsExample/> */}
       <ToastContainer />
       <VerticalButtons />
+      <ResponsiveGridButtons />
+      <Garage />
+      <Userlist users={usersData} />
     </div>
 
     </>
